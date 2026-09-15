@@ -102,8 +102,8 @@ function setLabels(phase){
  const svg=$('#label-lines');svg.style.opacity=amount;svg.setAttribute('viewBox',`0 0 ${viewportW} ${viewportH}`);
  const paths=[];
  [['#label-dou',.20,36.36,11.5],['#label-gong',.64,35.99,11.65],['#label-ang',.72,35.59,12.19]].forEach(([id,x,y,z],i)=>{
-  const el=$(id),p=project(x,y,z),lx=viewportW*(mobile()?.88:[.79,.92,.94][i]),ly=viewportH*(mobile()?[.42,.53,.64][i]:[.30,.49,.63][i]);el.style.opacity=amount;el.style.left=lx+'px';el.style.top=ly+'px';
-  paths.push(`<path d="M${p.x} ${p.y} L${lx-50} ${ly} H${lx-14}"/><circle cx="${p.x}" cy="${p.y}" r="2"/>`);
+  const el=$(id),p=project(x,y,z),lx=viewportW*(mobile()?.08:.12),ly=viewportH*(mobile()?[.48,.59,.70][i]:[.53,.64,.75][i]);el.style.opacity=amount;el.style.left=lx+'px';el.style.top=ly+'px';
+  paths.push(`<path d="M${p.x} ${p.y} L${lx+80} ${ly} H${lx+38}"/><circle cx="${p.x}" cy="${p.y}" r="2"/>`);
  });svg.innerHTML=paths.join('');
 
 }
