@@ -1,0 +1,157 @@
+{
+  "check": {
+    "errors": [],
+    "checks": [
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0,
+        "currentTime": 0,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0.5,
+        "currentTime": 0.729166,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 1,
+        "currentTime": 1.458333,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0.25,
+        "currentTime": 0.364583,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0,
+        "currentTime": 0,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "mobile": {
+      "overflow": false,
+      "stats": {
+        "ready": true,
+        "failed": false,
+        "target": 0.5999210110584519,
+        "currentTime": 0.874884,
+        "duration": 1.5,
+        "seeking": false,
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  },
+  "interaction": {
+    "errors": [],
+    "forward": {
+      "ready": true,
+      "failed": false,
+      "target": 0.3333333333333333,
+      "currentTime": 0.486111,
+      "duration": 1.5,
+      "seeking": false,
+      "width": 1920,
+      "height": 1080
+    },
+    "reverse": {
+      "ready": true,
+      "failed": false,
+      "target": 0,
+      "currentTime": 0,
+      "duration": 1.5,
+      "seeking": false,
+      "width": 1920,
+      "height": 1080
+    },
+    "failure": true,
+    "recovered": {
+      "ready": true,
+      "failed": false,
+      "target": 0,
+      "currentTime": 0,
+      "duration": 1.5,
+      "seeking": false,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "study": {
+    "errors": [],
+    "checks": [
+      {
+        "image": "/offline/detail-hd.jpg",
+        "width": 1920,
+        "active": "本轮精修"
+      },
+      {
+        "image": "/offline/poster-refined.jpg",
+        "width": 960,
+        "active": "上一版 540p"
+      },
+      {
+        "image": "/alignment/design-04.png",
+        "width": 1672,
+        "active": "原设计稿"
+      },
+      {
+        "image": "/offline/detail-hd.jpg",
+        "width": 1920,
+        "active": "本轮精修"
+      }
+    ],
+    "overflow": false
+  },
+  "source_frames": {
+    "count": 36,
+    "sizes": [
+      [
+        1920,
+        1080
+      ]
+    ],
+    "unique_images": 36
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1",
+        "nb_frames": "36"
+      }
+    ],
+    "format": {
+      "duration": "1.500000",
+      "size": "6954951"
+    }
+  },
+  "note": "加载失败测试主动阻断一次请求，重试已恢复；关闭景深的排查帧未用于最终视频。"
+}

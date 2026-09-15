@@ -309,5 +309,17 @@
     "detail": "yingxian-pagoda/public/offline/detail-refined.jpg",
     "comparison": "yingxian-pagoda/public/material-study.html",
     "scope": "斗栱局部样片，36帧，1.5秒；实时模型保留"
+  },
+  "offline_hd": {
+    "scene": "offline-render/sharp/斗栱原生高清.blend",
+    "video": "yingxian-pagoda/public/offline/dougong-hd.mp4",
+    "detail": "yingxian-pagoda/public/offline/detail-hd.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "frames": 36,
+    "depth_of_field": true,
+    "fstop": 8
   }
 }
