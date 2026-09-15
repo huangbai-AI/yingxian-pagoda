@@ -1,0 +1,13 @@
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/.DS_Store
+**/.env
+**/.env.*
+**/*.pyc
+**/*.blend
+**/*.blend1
+**/*.blend2
+/model/*.glb
+/*.zip
+文件校验.json

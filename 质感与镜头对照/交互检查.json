@@ -1,0 +1,224 @@
+{
+  "errors": [],
+  "cut": {
+    "stochasticMaterials": 0,
+    "timberNormalMaps": 189,
+    "triangles": 879379,
+    "calls": 177,
+    "frameMs": 16.656249999999936,
+    "phase": 0,
+    "exploring": true,
+    "explode": 0.6402528750666894,
+    "hiddenRoof": true,
+    "cutaway": true,
+    "floor": "3",
+    "fov": 34,
+    "camera": [
+      24,
+      49.00000000000001,
+      44.999999999999986
+    ],
+    "target": [
+      0,
+      34,
+      0
+    ],
+    "levelOffsets": [
+      {
+        "level": 0,
+        "y": 0
+      },
+      {
+        "level": 1,
+        "y": -5.122023000533515
+      },
+      {
+        "level": 2,
+        "y": 0
+      },
+      {
+        "level": 3,
+        "y": 5.122023000533515
+      },
+      {
+        "level": 4,
+        "y": 10.24404600106703
+      },
+      {
+        "level": 5,
+        "y": 15.366069001600545
+      },
+      {
+        "level": 6,
+        "y": 15.366069001600545
+      }
+    ],
+    "connected": false
+  },
+  "restored": {
+    "stochasticMaterials": 0,
+    "timberNormalMaps": 189,
+    "triangles": 7073091,
+    "calls": 1071,
+    "frameMs": 19.22307692307696,
+    "phase": 0,
+    "exploring": true,
+    "explode": 0,
+    "hiddenRoof": false,
+    "cutaway": false,
+    "floor": "all",
+    "fov": 34,
+    "camera": [
+      65,
+      60.00000000000001,
+      145
+    ],
+    "target": [
+      0,
+      32,
+      0
+    ],
+    "levelOffsets": [
+      {
+        "level": 0,
+        "y": 0
+      },
+      {
+        "level": 1,
+        "y": 0
+      },
+      {
+        "level": 2,
+        "y": 0
+      },
+      {
+        "level": 3,
+        "y": 0
+      },
+      {
+        "level": 4,
+        "y": 0
+      },
+      {
+        "level": 5,
+        "y": 0
+      },
+      {
+        "level": 6,
+        "y": 0
+      }
+    ],
+    "connected": true
+  },
+  "end": {
+    "stochasticMaterials": 0,
+    "timberNormalMaps": 189,
+    "triangles": 7073085,
+    "calls": 1068,
+    "frameMs": 22.58064516129032,
+    "phase": 4.998575,
+    "exploring": false,
+    "explode": 0,
+    "hiddenRoof": false,
+    "cutaway": false,
+    "floor": "all",
+    "fov": 34,
+    "camera": [
+      50,
+      34,
+      138
+    ],
+    "target": [
+      0,
+      33,
+      0
+    ],
+    "levelOffsets": [
+      {
+        "level": 0,
+        "y": 0
+      },
+      {
+        "level": 1,
+        "y": 0
+      },
+      {
+        "level": 2,
+        "y": 0
+      },
+      {
+        "level": 3,
+        "y": 0
+      },
+      {
+        "level": 4,
+        "y": 0
+      },
+      {
+        "level": 5,
+        "y": 0
+      },
+      {
+        "level": 6,
+        "y": 0
+      }
+    ],
+    "connected": true
+  },
+  "start": {
+    "stochasticMaterials": 0,
+    "timberNormalMaps": 189,
+    "triangles": 7073073,
+    "calls": 1062,
+    "frameMs": 22.49249999999997,
+    "phase": 0.00125,
+    "exploring": false,
+    "explode": 0,
+    "hiddenRoof": false,
+    "cutaway": false,
+    "floor": "all",
+    "fov": 42,
+    "camera": [
+      34,
+      18,
+      92
+    ],
+    "target": [
+      0,
+      32,
+      0
+    ],
+    "levelOffsets": [
+      {
+        "level": 0,
+        "y": 0
+      },
+      {
+        "level": 1,
+        "y": 0
+      },
+      {
+        "level": 2,
+        "y": 0
+      },
+      {
+        "level": 3,
+        "y": 0
+      },
+      {
+        "level": 4,
+        "y": 0
+      },
+      {
+        "level": 5,
+        "y": 0
+      },
+      {
+        "level": 6,
+        "y": 0
+      }
+    ],
+    "connected": true
+  },
+  "overflow": false
+}

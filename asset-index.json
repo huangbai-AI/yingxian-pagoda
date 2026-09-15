@@ -1,0 +1,248 @@
+{
+  "model_source": "现有 Blender 精修模型，复用；本轮未改变结构",
+  "approved_designs": [
+    "第三版设计/03_单层柱网.png",
+    "第三版设计/01_整塔.png",
+    "第三版设计/05_归位飞檐.png",
+    "第三版设计/06_完整全景.png",
+    "第三版设计/04_斗栱特写.png",
+    "第三版设计/02_斜向拆层.png"
+  ],
+  "editable_model": "model/应县木塔.blend",
+  "web_model": "yingxian-pagoda/public/models/yingxian.glb",
+  "lighting_previous": "model/应县木塔_六幕光影.blend",
+  "lighting_samples": "质感与镜头对照/质感样片.blend",
+  "render_samples": [
+    "质感与镜头对照/首页_预渲染样片.png",
+    "质感与镜头对照/斗栱_预渲染样片.png"
+  ],
+  "levels": [
+    {
+      "name": "Level_0",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Level_1",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        -8,
+        0
+      ]
+    },
+    {
+      "name": "Level_2",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Level_3",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        8,
+        0
+      ]
+    },
+    {
+      "name": "Level_4",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        16,
+        0
+      ]
+    },
+    {
+      "name": "Level_5",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        24,
+        0
+      ]
+    },
+    {
+      "name": "Level_6",
+      "parent": "应县木塔",
+      "initial": {
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "full_explode_offset": [
+        0,
+        24,
+        0
+      ]
+    }
+  ],
+  "camera_anchors": {
+    "intro": {
+      "position": [
+        18,
+        18,
+        60
+      ],
+      "target": [
+        0,
+        29,
+        0
+      ],
+      "vertical_fov": 64
+    },
+    "detail": {
+      "position": [
+        3.6,
+        43.25,
+        13.9
+      ],
+      "target": [
+        0.2,
+        43.7,
+        11
+      ],
+      "vertical_fov": 42
+    }
+  },
+  "verified": [
+    "七层分组与初始位置来自最终 GLB",
+    "电脑与手机六幕运行检查",
+    "两张实际预渲染样片"
+  ],
+  "remaining": [
+    "完整预渲染滚动序列未生成",
+    "部分木构形体及装饰与生成设计稿不同",
+    "预渲染定帧保留上轮版本，本轮调整用于实时首屏"
+  ]
+}

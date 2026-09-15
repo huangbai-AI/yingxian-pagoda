@@ -1,0 +1,70 @@
+{
+  "Diffuse": {
+    "jpg": {
+      "size": 2223327,
+      "md5": "f5f9c55696f047ceaa49dc97c5aa5526",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_diff_2k.jpg"
+    },
+    "png": {
+      "size": 7806028,
+      "md5": "ac65dc0b19c59128da8d0198b0edd9c4",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_wood/rough_wood_diff_2k.png"
+    },
+    "exr": {
+      "size": 5752287,
+      "md5": "f0cee61c628a51b43d842b159f9f8e99",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/rough_wood/rough_wood_diff_2k.exr"
+    }
+  },
+  "nor_gl": {
+    "jpg": {
+      "size": 2520021,
+      "md5": "62594f2d00eb246581b9d4fde30209f1",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_nor_gl_2k.jpg"
+    },
+    "png": {
+      "size": 6604342,
+      "md5": "198eec08d20acddfd651956fba2fc538",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_wood/rough_wood_nor_gl_2k.png"
+    },
+    "exr": {
+      "size": 6422816,
+      "md5": "5f412d5dc1f20f7b1053d8d7eb1d0ca9",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/rough_wood/rough_wood_nor_gl_2k.exr"
+    }
+  },
+  "Rough": {
+    "jpg": {
+      "size": 810338,
+      "md5": "832d6d549a8e76c16b9af2586f429d6c",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_rough_2k.jpg"
+    },
+    "png": {
+      "size": 7260975,
+      "md5": "40e8cca6a79e9ab88fc1d8b9fed6a580",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_wood/rough_wood_rough_2k.png"
+    },
+    "exr": {
+      "size": 4435980,
+      "md5": "fc3f28ad9d84aa5453a4806e396bf06a",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/rough_wood/rough_wood_rough_2k.exr"
+    }
+  },
+  "Displacement": {
+    "jpg": {
+      "size": 418227,
+      "md5": "4e04c41245146e21ca500ff72eac74d9",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_disp_2k.jpg"
+    },
+    "png": {
+      "size": 7791679,
+      "md5": "b4587bb26240fa66c26ee52572f05149",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_wood/rough_wood_disp_2k.png"
+    },
+    "exr": {
+      "size": 2940853,
+      "md5": "e45af48a99f447b86e93c3353d0c7599",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/rough_wood/rough_wood_disp_2k.exr"
+    }
+  }
+}

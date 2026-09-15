@@ -1,0 +1,12 @@
+import {NodeIO} from '@gltf-transform/core';
+import {KHRDracoMeshCompression} from '@gltf-transform/extensions';
+import {draco} from '@gltf-transform/functions';
+import draco3d from 'draco3dgltf';
+import {statSync} from 'node:fs';
+const io = new NodeIO().registerExtensions([KHRDracoMeshCompression]).registerDependencies({'draco3d.encoder':await draco3d.createEncoderModule(),'draco3d.decoder':await draco3d.createDecoderModule()});
+const input='../model/应县木塔_通用.glb',output='public/models/yingxian.glb';
+const doc=await io.read(input);
+await doc.transform(draco({method:'edgebreaker',quantizePosition:16,quantizeNormal:12,encodeSpeed:5,decodeSpeed:5}));
+await io.write(output,doc);
+const verify=await io.read(output);
+console.log(JSON.stringify({before:statSync(input).size,after:statSync(output).size,nodes:verify.getRoot().listNodes().length,meshes:verify.getRoot().listMeshes().length}));

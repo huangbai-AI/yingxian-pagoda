@@ -1,0 +1,356 @@
+{
+  "six_scene_run": [
+    {
+      "chapter": 1,
+      "triangles": 1217608,
+      "calls": 245,
+      "frameMs": 16.276000000000057,
+      "phase": 0,
+      "exploring": false,
+      "explode": 0,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        100.44000000000001,
+        54.68,
+        213.84
+      ],
+      "target": [
+        0,
+        32,
+        0
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": 0
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 0
+        },
+        {
+          "level": 4,
+          "y": 0
+        },
+        {
+          "level": 5,
+          "y": 0
+        },
+        {
+          "level": 6,
+          "y": 0
+        }
+      ],
+      "connected": true
+    },
+    {
+      "chapter": 2,
+      "triangles": 622696,
+      "calls": 108,
+      "frameMs": 16.097999999999594,
+      "phase": 0.9999,
+      "exploring": false,
+      "explode": 1,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        51.300000000000004,
+        71,
+        85.05000000000001
+      ],
+      "target": [
+        0,
+        44,
+        0
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": -8
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 8
+        },
+        {
+          "level": 4,
+          "y": 16
+        },
+        {
+          "level": 5,
+          "y": 24
+        },
+        {
+          "level": 6,
+          "y": 24
+        }
+      ],
+      "connected": false
+    },
+    {
+      "chapter": 3,
+      "triangles": 102976,
+      "calls": 17,
+      "frameMs": 15.683999999999942,
+      "phase": 1.99988,
+      "exploring": false,
+      "explode": 1,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        44.85,
+        97.07499999999999,
+        64.35
+      ],
+      "target": [
+        0,
+        41.5,
+        0
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": -8
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 8
+        },
+        {
+          "level": 4,
+          "y": 16
+        },
+        {
+          "level": 5,
+          "y": 24
+        },
+        {
+          "level": 6,
+          "y": 24
+        }
+      ],
+      "connected": false
+    },
+    {
+      "chapter": 4,
+      "triangles": 205216,
+      "calls": 31,
+      "frameMs": 15.185,
+      "phase": 2.99973,
+      "exploring": false,
+      "explode": 1,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        4.558999999999998,
+        42.65,
+        20.189999999999998
+      ],
+      "target": [
+        0.18,
+        44.1,
+        11.2
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": -8
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 8
+        },
+        {
+          "level": 4,
+          "y": 16
+        },
+        {
+          "level": 5,
+          "y": 24
+        },
+        {
+          "level": 6,
+          "y": 24
+        }
+      ],
+      "connected": false
+    },
+    {
+      "chapter": 5,
+      "triangles": 1175900,
+      "calls": 211,
+      "frameMs": 15.549000000000524,
+      "phase": 4,
+      "exploring": false,
+      "explode": 0,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        23.25,
+        32.67,
+        45.7
+      ],
+      "target": [
+        0.5,
+        34.1,
+        8
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": 0
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 0
+        },
+        {
+          "level": 4,
+          "y": 0
+        },
+        {
+          "level": 5,
+          "y": 0
+        },
+        {
+          "level": 6,
+          "y": 0
+        }
+      ],
+      "connected": true
+    },
+    {
+      "chapter": 6,
+      "triangles": 1217616,
+      "calls": 249,
+      "frameMs": 15.29200000000099,
+      "phase": 4.999995,
+      "exploring": false,
+      "explode": 0,
+      "hiddenRoof": false,
+      "cutaway": false,
+      "floor": "all",
+      "camera": [
+        105.6,
+        50.15,
+        239.25
+      ],
+      "target": [
+        0,
+        32,
+        0
+      ],
+      "levelOffsets": [
+        {
+          "level": 0,
+          "y": 0
+        },
+        {
+          "level": 1,
+          "y": 0
+        },
+        {
+          "level": 2,
+          "y": 0
+        },
+        {
+          "level": 3,
+          "y": 0
+        },
+        {
+          "level": 4,
+          "y": 0
+        },
+        {
+          "level": 5,
+          "y": 0
+        },
+        {
+          "level": 6,
+          "y": 0
+        }
+      ],
+      "connected": true
+    },
+    {
+      "check": "隐藏屋面",
+      "ok": true
+    },
+    {
+      "check": "剖看内部",
+      "ok": true
+    },
+    {
+      "check": "楼层选择",
+      "ok": true
+    },
+    {
+      "check": "楼层展开",
+      "ok": true
+    },
+    {
+      "check": "恢复合拢",
+      "ok": true
+    },
+    {
+      "check": "关闭并恢复阅读",
+      "ok": true
+    },
+    {
+      "check": "反向滚动归位",
+      "ok": true
+    }
+  ],
+  "final_mobile_columns": {
+    "camera_distance_factor": 2.15,
+    "horizontal_shift": 0.02,
+    "screenshot": "手机_03.png",
+    "verified_after_release_reload": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "saved_scene": "斗栱质感样片",
+  "camera": [
+    3.5999999046325684,
+    -13.899999618530273,
+    43.25
+  ],
+  "lens_mm": 31.26106834411621,
+  "vertical_fov_degrees": 42.00000053005865,
+  "depth_of_field": true,
+  "f_stop": 1.399999976158142,
+  "packed_images": [
+    "atmosphere-guard.png",
+    "atmosphere.png",
+    "chamber-haze.png",
+    "night-sky.png",
+    "pine.png",
+    "timber-color.jpg",
+    "timber-height.png",
+    "timber-normal.jpg",
+    "timber-roughness.jpg"
+  ],
+  "samples": 64,
+  "renders": [
+    {
+      "name": "首页_预渲染样片.png",
+      "size": [
+        1008,
+        568
+      ]
+    },
+    {
+      "name": "斗栱_预渲染样片.png",
+      "size": [
+        1008,
+        568
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "height_m": 67.30999755859375,
+  "base_body_diameter_m": 30.27,
+  "mesh_objects": 255,
+  "level_groups": 7,
+  "vertices": 609508,
+  "polygons_before_modifiers": 351958,
+  "timber_refined": true,
+  "assembly_corrected": true,
+  "note": "构件按楼层与材质合并；数量为网格对象数，不是单根木构件数量。科普重建，非测绘模型。"
+}
