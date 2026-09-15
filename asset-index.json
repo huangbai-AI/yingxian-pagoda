@@ -244,5 +244,7 @@
     "完整预渲染滚动序列未生成",
     "部分木构形体及装饰与生成设计稿不同",
     "预渲染定帧保留上轮版本，本轮调整用于实时首屏"
-  ]
+  ],
+  "latest_web_alignment": "yingxian-pagoda/public/alignment.html",
+  "latest_web_revision": "v10：六幕光影与文字排版；模型几何不变"
 }

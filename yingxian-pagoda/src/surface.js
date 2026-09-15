@@ -7,7 +7,7 @@ export function refineSurface(mesh,renderer){
  m.alphaHash=false;m.alphaToCoverage=true;m.transparent=false;m.opacity=1;
  if(/古木|浅木|暗木|朱漆/.test(m.name)){
   for(const t of [color,normal,roughness])t.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
-  m.map=color;m.bumpMap=null;m.bumpScale=0;m.normalMap=normal;m.normalScale.set(.58,.58);m.roughnessMap=roughness;m.roughness=.96;m.metalness=0;
+  m.map=color;m.bumpMap=null;m.bumpScale=0;m.normalMap=normal;m.normalScale.set(.42,.42);m.roughnessMap=roughness;m.roughness=.87;m.metalness=0;
   if(/浅木/.test(m.name))m.color.setRGB(.98,.73,.45);else if(/暗木/.test(m.name))m.color.setRGB(.41,.30,.21);else if(/朱漆/.test(m.name))m.color.setRGB(.60,.31,.18);else m.color.setRGB(.78,.51,.30);
  }
  // An opaque, continuous sweep replaces stochastic transparency during isolation.
