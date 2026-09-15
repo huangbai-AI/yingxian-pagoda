@@ -55,7 +55,7 @@ try{
   });
   loaded=true;$('#load-percent').textContent='100%';$('#load-bar').style.width='100%';document.body.classList.remove('loading');$('#model-loading').style.opacity=0;setTimeout(()=>$('#model-loading').hidden=true,650);
   $('#stage').setAttribute('aria-label','应县木塔三维模型已载入。可跟随滚动看斜向拆层、柱网、斗栱与飞檐，或进入自由观塔。');
-  window.__pagoda={loaded:true,levels:levels.length,meshes:meshes.length,stats:()=>({stochasticMaterials:meshes.filter(m=>m.material.alphaHash).length,timberNormalMaps:meshes.filter(m=>m.material.normalMap).length,triangles:renderer.info.render.triangles,calls:renderer.info.render.calls,frameMs:frames.reduce((a,b)=>a+b,0)/(frames.length||1),phase:state.phase,exploring,explode:state.explode,hiddenRoof,cutaway,floor:selectedFloor,fov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),levelOffsets:levels.map(l=>({level:l.userData.index,y:l.position.y})),connected:state.explode<.001&&roofMeshes.every(m=>Math.abs(m.position.y)<.001)})};
+  window.__pagoda={loaded:true,levels:levels.length,meshes:meshes.length,stats:()=>({lighting:{key:key.intensity,fill:fill.intensity,ambient:ambient.intensity},stochasticMaterials:meshes.filter(m=>m.material.alphaHash).length,timberNormalMaps:meshes.filter(m=>m.material.normalMap).length,triangles:renderer.info.render.triangles,calls:renderer.info.render.calls,frameMs:frames.reduce((a,b)=>a+b,0)/(frames.length||1),phase:state.phase,exploring,explode:state.explode,hiddenRoof,cutaway,floor:selectedFloor,fov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),levelOffsets:levels.map(l=>({level:l.userData.index,y:l.position.y})),connected:state.explode<.001&&roofMeshes.every(m=>Math.abs(m.position.y)<.001)})};
  },p=>{const pct=p.total?Math.round(p.loaded/p.total*99):Math.min(95,Math.round(p.loaded/100000));$('#load-percent').textContent=pct+'%';$('#load-bar').style.width=pct+'%';},failure);
 }catch(e){failure(e);}
 let timeline;
@@ -122,17 +122,19 @@ function updateAtmosphere(phase){
 }
 function updateLight(phase){
  const intro=1-range(.08,.85,phase), close=range(2.2,2.92,phase)*(1-range(3.05,3.8,phase));
+ const interior=range(.15,.85,phase)*(1-range(4.15,4.85,phase));
  const size=lerp(lerp(62,18,1-range(.08,.6,Math.abs(phase-2))),8,close), y=lerp(35,35.8+offsetFor(3,state.explode),close), z=lerp(0,11.5,close);
- // One dominant warm side light; restrained fill preserves the depth under the eaves.
+ // 与离线近景保持同侧主光，弱冷补光托住檐下的木构细节。
  key.target.position.set(0,y,z);
- key.position.set(lerp(lerp(52,3,close),58,intro),y+lerp(lerp(29,6,close),23,intro),z+lerp(lerp(12,19,close),2,intro));
- const columns=1-range(.04,.70,Math.abs(phase-2));key.intensity=lerp(6.4,7.2,intro);key.color.setHex(0xffd1a0);
- scene.environmentIntensity=.13;
+ key.position.set(lerp(lerp(52,8,close),58,intro),y+lerp(lerp(29,4,close),23,intro),z+lerp(lerp(12,7,close),2,intro));
+ key.intensity=lerp(lerp(6.4,4.9,interior),7.2,intro);key.color.setHex(0xffd1a0).lerp(new THREE.Color(0xffdfbd),interior*.7);
+ scene.environmentIntensity=lerp(.13,.16,interior);
  key.shadow.camera.left=-size;key.shadow.camera.right=size;key.shadow.camera.top=size;key.shadow.camera.bottom=-size;key.shadow.camera.updateProjectionMatrix();
- key.shadow.normalBias=lerp(.05,.012,close);key.shadow.bias=lerp(-.00012,-.00004,close);
- ambient.intensity=.18;fill.intensity=lerp(.24,.32,close)+columns*.10;fill.target.position.set(0,y,z);
- rim.intensity=.38;rim.target.position.set(0,y,z);
- bounce.intensity=close*.32;bounce.position.set(-8,y+2,z+18);bounce.target.position.set(0,y,z);
+ key.shadow.normalBias=lerp(.05,.012,close);key.shadow.bias=lerp(-.00012,-.00004,close);key.shadow.radius=lerp(4,7,close);
+ ambient.intensity=lerp(.18,.26,interior);fill.intensity=lerp(.24,.42,interior)+close*.10;
+ fill.position.set(lerp(-30,-7,close),lerp(38,y+1,close),lerp(60,z+8,close));fill.target.position.set(0,y,z);
+ rim.intensity=lerp(.38,.28,interior);rim.target.position.set(0,y,z);
+ bounce.intensity=close*.25;bounce.position.set(-8,y-1,z+6);bounce.target.position.set(0,y,z);
 }
 
 function render(now){requestAnimationFrame(render);if(!renderer||document.hidden)return;const dt=Math.min((now-lastTime)/1000,.1);lastTime=now;
