@@ -14,6 +14,7 @@ export function refineSurface(mesh,renderer){
   m.map=color;m.bumpMap=null;m.bumpScale=0;m.normalMap=normal;m.normalScale.set(.32,.32);m.roughnessMap=roughness;m.roughness=.87;m.metalness=0;
   if(/浅木/.test(m.name))m.color.setRGB(.82,.70,.54);else if(/暗木/.test(m.name))m.color.setRGB(.38,.31,.25);else if(/朱漆/.test(m.name))m.color.setRGB(.50,.32,.23);else m.color.setRGB(.65,.52,.40);
  }
+ if(/风化土朱墙/.test(m.name)){m.color.setRGB(.58,.58,.58);m.bumpMap=null;m.normalScale.set(.55,.55);m.roughness=.97;m.metalness=0;}
  if(/风化青石|石台/.test(m.name)){m.color.setHex(0x777b72);m.map=stoneTexture;m.bumpMap=stoneTexture;m.bumpScale=.035;m.roughness=.94;m.metalness=0;}
  // An opaque, continuous sweep replaces stochastic transparency during isolation.
  mesh.geometry.computeBoundingBox();const box=mesh.geometry.boundingBox;

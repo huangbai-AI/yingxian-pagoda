@@ -1,0 +1,437 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "stats": {
+        "lighting": {
+          "key": 7.2,
+          "fill": 0.24,
+          "ambient": 0.18
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 8856219,
+        "calls": 1263,
+        "frameMs": 50.77272727272739,
+        "phase": 0,
+        "exploring": false,
+        "explode": 0,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 64,
+        "camera": [
+          18,
+          18,
+          60
+        ],
+        "target": [
+          0,
+          29,
+          0
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": 0
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 0
+          },
+          {
+            "level": 4,
+            "y": 0
+          },
+          {
+            "level": 5,
+            "y": 0
+          },
+          {
+            "level": 6,
+            "y": 0
+          }
+        ],
+        "connected": true
+      },
+      "title": [
+        {
+          "text": "天地之间\n一木千年",
+          "x": 62.953125,
+          "y": 286.6875,
+          "w": 1531.09375,
+          "h": 167.75,
+          "font": "144.628px"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "lighting": {
+          "key": 4.9,
+          "fill": 0.42,
+          "ambient": 0.26
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 4069467,
+        "calls": 531,
+        "frameMs": 51.67333333333344,
+        "phase": 1,
+        "exploring": false,
+        "explode": 1,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 34,
+        "camera": [
+          29,
+          59,
+          49
+        ],
+        "target": [
+          0,
+          44,
+          0
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": -8
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 8
+          },
+          {
+            "level": 4,
+            "y": 16
+          },
+          {
+            "level": 5,
+            "y": 24
+          },
+          {
+            "level": 6,
+            "y": 24
+          }
+        ],
+        "connected": false
+      },
+      "title": [
+        {
+          "text": "层层展开，\n看见暗层。",
+          "x": 1267.59375,
+          "y": 564,
+          "w": 364.53125,
+          "h": 189,
+          "font": "79.42px"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "lighting": {
+          "key": 4.9,
+          "fill": 0.42,
+          "ambient": 0.26
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 943387,
+        "calls": 111,
+        "frameMs": 50.90810810810814,
+        "phase": 2,
+        "exploring": false,
+        "explode": 1,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 36,
+        "camera": [
+          17,
+          54,
+          29
+        ],
+        "target": [
+          0,
+          41.5,
+          0
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": -8
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 8
+          },
+          {
+            "level": 4,
+            "y": 16
+          },
+          {
+            "level": 5,
+            "y": 24
+          },
+          {
+            "level": 6,
+            "y": 24
+          }
+        ],
+        "connected": false
+      },
+      "title": [
+        {
+          "text": "八面相连，\n内外相依。",
+          "x": 1292.453125,
+          "y": 358.546875,
+          "w": 347.96875,
+          "h": 172.59375,
+          "font": "74.404px"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "lighting": {
+          "key": 4.9,
+          "fill": 0.52,
+          "ambient": 0.26
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 2047238,
+        "calls": 266,
+        "frameMs": 51.25749999999996,
+        "phase": 3,
+        "exploring": false,
+        "explode": 1,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 42,
+        "camera": [
+          3.6,
+          43.25,
+          13.9
+        ],
+        "target": [
+          0.2,
+          43.7,
+          11
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": -8
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 8
+          },
+          {
+            "level": 4,
+            "y": 16
+          },
+          {
+            "level": 5,
+            "y": 24
+          },
+          {
+            "level": 6,
+            "y": 24
+          }
+        ],
+        "connected": false
+      },
+      "title": [
+        {
+          "text": "一木承一木。",
+          "x": 57.984375,
+          "y": 224.59375,
+          "w": 613.078125,
+          "h": 94.453125,
+          "font": "83.6px"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "lighting": {
+          "key": 4.9,
+          "fill": 0.42,
+          "ambient": 0.26
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 8324243,
+        "calls": 1075,
+        "frameMs": 52.5413043478261,
+        "phase": 4,
+        "exploring": false,
+        "explode": 0,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 40,
+        "camera": [
+          9,
+          33,
+          24
+        ],
+        "target": [
+          0.5,
+          36,
+          8
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": 0
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 0
+          },
+          {
+            "level": 4,
+            "y": 0
+          },
+          {
+            "level": 5,
+            "y": 0
+          },
+          {
+            "level": 6,
+            "y": 0
+          }
+        ],
+        "connected": true
+      },
+      "title": [
+        {
+          "text": "合木成塔。",
+          "x": 57.984375,
+          "y": 627.1875,
+          "w": 424.28125,
+          "h": 98.640625,
+          "font": "83.6px"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "lighting": {
+          "key": 6.4,
+          "fill": 0.24,
+          "ambient": 0.18
+        },
+        "stochasticMaterials": 0,
+        "timberNormalMaps": 203,
+        "triangles": 8856337,
+        "calls": 1270,
+        "frameMs": 53.20769230769228,
+        "phase": 5,
+        "exploring": false,
+        "explode": 0,
+        "hiddenRoof": false,
+        "cutaway": false,
+        "floor": "all",
+        "fov": 34,
+        "camera": [
+          43,
+          28,
+          126
+        ],
+        "target": [
+          0,
+          31.5,
+          0
+        ],
+        "levelOffsets": [
+          {
+            "level": 0,
+            "y": 0
+          },
+          {
+            "level": 1,
+            "y": 0
+          },
+          {
+            "level": 2,
+            "y": 0
+          },
+          {
+            "level": 3,
+            "y": 0
+          },
+          {
+            "level": 4,
+            "y": 0
+          },
+          {
+            "level": 5,
+            "y": 0
+          },
+          {
+            "level": 6,
+            "y": 0
+          }
+        ],
+        "connected": true
+      },
+      "title": [
+        {
+          "text": "千年未完，\n仍需守护。",
+          "x": 1027.328125,
+          "y": 277.46875,
+          "w": 579.9375,
+          "h": 215.375,
+          "font": "94.468px"
+        }
+      ]
+    }
+  ]
+}
