@@ -1,0 +1,34 @@
+{
+  "桌面": {
+    "errors": [],
+    "ready": {
+      "locked": false,
+      "title": [
+        "1",
+        "1"
+      ],
+      "light": {
+        "key": 7.2,
+        "fill": 0.24,
+        "ambient": 0.18
+      }
+    },
+    "craft": true
+  },
+  "手机": {
+    "errors": [],
+    "ready": {
+      "locked": false,
+      "title": [
+        "1",
+        "1"
+      ],
+      "light": {
+        "key": 7.2,
+        "fill": 0.24,
+        "ambient": 0.18
+      }
+    },
+    "craft": true
+  }
+}

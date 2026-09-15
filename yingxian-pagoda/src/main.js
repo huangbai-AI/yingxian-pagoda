@@ -11,6 +11,8 @@ import {refineSurface} from './surface.js';
 import {createCinema} from './cinema.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 gsap.registerPlugin(ScrollTrigger);
+history.scrollRestoration='manual';
+if(!location.hash||location.hash==='#intro')window.scrollTo(0,0);
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],clamp=THREE.MathUtils.clamp,lerp=THREE.MathUtils.lerp;
 const ease=t=>{t=clamp(t,0,1);return t*t*t*(t*(t*6-15)+10);},range=(a,b,t)=>ease((t-a)/(b-a)),mobile=()=>innerWidth<=700;
 const state={phase:0,explode:0},sections=$$('.story'),panels=$$('.panel');
@@ -18,6 +20,8 @@ let reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 try{reduced=localStorage.getItem('pagoda-reduced-motion')==='true'||reduced;}catch{}
 let lenis,renderer,cinema,controls,model,loaded=false,exploring=false,lastFocus,cutaway=false,hiddenRoof=false,autorotate=false,manualExplode=0,selectedFloor='all',planTop=false;
 let savedScroll=0;
+const arrival={light:1},loadingStarted=performance.now();
+let arrivalTimeline;
 let frameCount=0,frames=[],lastTime=performance.now(),viewportW=innerWidth,viewportH=innerHeight;
 const levels=[],meshes=[],roofMeshes=[],stage=$('#stage'),canvas=$('#world');
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.08,1200);
@@ -34,8 +38,8 @@ for(let i=2;i<=4;i++){const pts=[];for(let k=0;k<=8;k++){const a=k*Math.PI/4;pts
 function setupMotion(){lenis?.destroy();lenis=null;document.body.classList.toggle('reduced-motion',reduced);$('#motion-toggle').setAttribute('aria-pressed',String(reduced));$('#motion-toggle').textContent=reduced?'恢复动态效果':'减少动态效果';if(!reduced){lenis=new Lenis({duration:1.05,smoothWheel:true,anchors:true});lenis.on('scroll',ScrollTrigger.update);}}
 setupMotion();gsap.ticker.add(t=>lenis?.raf(t*1000));gsap.ticker.lagSmoothing(0);
 $('#motion-toggle').onclick=()=>{reduced=!reduced;try{localStorage.setItem('pagoda-reduced-motion',String(reduced));}catch{}setupMotion();buildStory();};
-function failure(error){console.error('模型加载失败',error);document.body.classList.remove('loading');$('#model-loading').hidden=true;$('#model-error').hidden=false;}
-$('#retry').onclick=()=>location.reload();document.body.classList.add('loading');
+function failure(error){console.error('模型加载失败',error);document.body.classList.remove('loading');lenis?.start();$('#model-loading').hidden=true;$('#model-error').hidden=false;}
+$('#retry').onclick=()=>location.reload();document.body.classList.add('loading');lenis?.stop();
 try{
  renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,mobile()?1.35:1.65));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.setClearColor(0x10201e,0);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.VSMShadowMap;renderer.localClippingEnabled=true;renderer.info.autoReset=false;
  const room=new RoomEnvironment();const pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromScene(room,.04).texture;scene.environmentIntensity=.22;room.dispose();pmrem.dispose();
@@ -53,11 +57,29 @@ try{
    refineSurface(o,renderer);
    o.userData.roof=/筒瓦|屋面|垂脊|檐口|椽子|脊饰|风铎|攒尖|塔刹|相轮|宝瓶|刹尖|刹链|瓦当|望板|屋架/.test(o.name);o.userData.stair=/木楼梯/.test(o.name);o.userData.enclosure=/隔扇|匾额/.test(o.name);o.userData.transition=/层间承|层间拉结/.test(o.name);if(o.userData.roof)roofMeshes.push(o);
   });
-  loaded=true;$('#load-percent').textContent='100%';$('#load-bar').style.width='100%';document.body.classList.remove('loading');$('#model-loading').style.opacity=0;setTimeout(()=>$('#model-loading').hidden=true,650);
+  loaded=true;$('#load-percent').textContent='100%';$('#load-bar').style.width='100%';startArrival();
   $('#stage').setAttribute('aria-label','应县木塔三维模型已载入。可跟随滚动看斜向拆层、柱网、斗栱与飞檐，或进入自由观塔。');
   window.__pagoda={loaded:true,levels:levels.length,meshes:meshes.length,stats:()=>({lighting:{key:key.intensity,fill:fill.intensity,ambient:ambient.intensity},stochasticMaterials:meshes.filter(m=>m.material.alphaHash).length,timberNormalMaps:meshes.filter(m=>m.material.normalMap).length,triangles:renderer.info.render.triangles,calls:renderer.info.render.calls,frameMs:frames.reduce((a,b)=>a+b,0)/(frames.length||1),phase:state.phase,exploring,explode:state.explode,hiddenRoof,cutaway,floor:selectedFloor,fov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),levelOffsets:levels.map(l=>({level:l.userData.index,y:l.position.y})),connected:state.explode<.001&&roofMeshes.every(m=>Math.abs(m.position.y)<.001)})};
  },p=>{const pct=p.total?Math.round(p.loaded/p.total*99):Math.min(95,Math.round(p.loaded/100000));$('#load-percent').textContent=pct+'%';$('#load-bar').style.width=pct+'%';},failure);
 }catch(e){failure(e);}
+async function startArrival(){
+ // 等字体和第一帧就绪，避免退场后突然出现空塔或换字。
+ await Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1800))]);
+ await new Promise(r=>setTimeout(r,Math.max(0,(reduced?0:1500)-(performance.now()-loadingStarted))));
+ await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+ const hero=(!location.hash||location.hash==='#intro')&&scrollY<innerHeight*.35;
+ const text=$$('.hero h1 span'),details=$$('.hero-meta,.hero-note,.scroll-cue');
+ const finish=()=>{arrival.light=1;$('#arrival-shade').style.opacity=0;$('#model-loading').hidden=true;document.body.classList.remove('loading');lenis?.start();gsap.set([...text,...details],{clearProps:'opacity,visibility,transform,filter'});};
+ if(reduced){finish();return;}
+ if(hero){arrival.light=.24;gsap.set('#arrival-shade',{opacity:1});gsap.set(text,{autoAlpha:0,y:26,filter:'blur(7px)'});gsap.set(details,{autoAlpha:0,y:12});}
+ arrivalTimeline=gsap.timeline({onComplete:finish});
+ arrivalTimeline.to('.loading-tower g',{animation:'none',opacity:1,y:0,scale:1,duration:.28})
+ .to('#model-loading',{opacity:0,duration:.7,ease:'power2.inOut',onStart:()=>document.body.classList.remove('loading'),onComplete:()=>$('#model-loading').hidden=true},.28);
+ if(hero){arrivalTimeline.to(arrival,{light:1,duration:2.4,ease:'power2.inOut'},.35)
+ .to('#arrival-shade',{opacity:0,duration:2.4,ease:'power2.inOut'},.35)
+ .to(text,{autoAlpha:1,y:0,filter:'blur(0px)',duration:1.35,stagger:.24,ease:'power3.out'},.85)
+ .to(details,{autoAlpha:1,y:0,duration:1,stagger:.10,ease:'power2.out'},1.7);}
+}
 let timeline;
 function buildStory(){timeline?.scrollTrigger?.kill();timeline?.kill();timeline=gsap.fromTo(state,{phase:0},{phase:5,ease:'none',scrollTrigger:{trigger:'#intro',start:'top top',endTrigger:'#guard',end:'top top',scrub:reduced?true:.65,invalidateOnRefresh:true}});}
 buildStory();window.addEventListener('resize',()=>{buildStory();ScrollTrigger.refresh();});document.fonts.ready.then(()=>ScrollTrigger.refresh());
@@ -134,6 +156,7 @@ function updateLight(phase){
  ambient.intensity=lerp(.18,.26,interior);fill.intensity=lerp(.24,.42,interior)+close*.10;
  fill.position.set(lerp(-30,-7,close),lerp(38,y+1,close),lerp(60,z+8,close));fill.target.position.set(0,y,z);
  rim.intensity=lerp(.38,.28,interior);rim.target.position.set(0,y,z);
+ key.intensity*=arrival.light;fill.intensity*=lerp(.5,1,arrival.light);rim.intensity*=lerp(.4,1,arrival.light);
  bounce.intensity=close*.25;bounce.position.set(-8,y-1,z+6);bounce.target.position.set(0,y,z);
 }
 

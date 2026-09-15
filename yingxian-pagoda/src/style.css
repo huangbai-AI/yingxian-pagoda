@@ -110,3 +110,18 @@ body{color:#f6e5c8}h1,h2,.brand{font-weight:700;font-synthesis:none}.hero h1{fon
 .grain{display:block;pointer-events:none;background-size:180px 180px;opacity:calc(var(--interior-texture,0)*.055);mix-blend-mode:screen}
 .is-exploring .chamber-haze,.is-exploring .grain{display:none}
 @media(max-width:700px){.chamber-haze{filter:blur(1px) saturate(.28);opacity:calc(var(--interior-texture,0)*.24)}.grain{opacity:calc(var(--interior-texture,0)*.04)}}
+
+/* 塔标逐层合拢，随后让位给首屏。 */
+body.loading{overflow:hidden}
+#model-loading{position:fixed;inset:0;z-index:100;background:radial-gradient(ellipse at 50% 44%,#18302d 0%,#091b1b 42%,#061213 100%);gap:20px;transition:none}
+#model-loading .loading-tower{width:96px;height:150px;overflow:visible;fill:currentColor;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;color:#e9d6b0;filter:drop-shadow(0 0 15px #d6ad5b24);margin-bottom:18px}
+.loading-tower g{transform-box:fill-box;transform-origin:center;animation:tower-assemble 2.8s cubic-bezier(.22,.65,.3,1) infinite;animation-delay:calc(var(--tier)*.11s)}
+@keyframes tower-assemble{0%,12%{opacity:.12;transform:translateY(-14px) scale(.86)}38%,73%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:.12;transform:translateY(12px) scale(.94)}}
+#model-loading .loading-title{font-size:19px;letter-spacing:5px;color:#ecddbe}
+#model-loading .loading-progress{font-size:11px;letter-spacing:2px;color:#a99f89;margin-top:12px}
+#model-loading>div{width:160px;background:#b79a6526}
+#load-bar{transition:width .25s ease}
+#arrival-shade{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at 70% 65%,#10201c88,#020b0eee);opacity:0}
+body.loading .site-header,body.loading main,body.loading .chapter-rail,body.loading .chapter-status{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.loading-tower g{animation:none}}
+@media(max-width:700px){#model-loading .loading-tower{width:78px;height:122px}#model-loading .loading-title{font-size:16px;letter-spacing:3px}}
