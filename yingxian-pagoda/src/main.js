@@ -116,7 +116,9 @@ function updateAtmosphere(phase){
  const a=Math.min(4,Math.floor(phase)),t=ease(clamp((phase-a-.08)/.84,0,1));
  const anchors=[[52,60,0,0],[44,38,.40,-7],[43,46,.35,5],[65,36,.22,9],[68,45,.32,-3],[38,67,.12,0]];
  const values=anchors[a].map((v,i)=>lerp(v,anchors[a+1][i],t));const style=document.documentElement.style;
- const backgroundLight=[1,.75,.90,.88,1.08,1];style.setProperty('--backdrop-light',lerp(backgroundLight[a],backgroundLight[a+1],t));style.setProperty('--haze-x',values[0]+'%');style.setProperty('--haze-y',values[1]+'%');style.setProperty('--chamber',values[2]);style.setProperty('--haze-angle',values[3]+'deg');style.setProperty('--haze-pan',((phase-2.5)*-2.8)+'%');
+ const backgroundLight=[1,.75,.90,.88,1.08,1];// 淡纹理只出现在中间四幕，首尾自然退净。
+ style.setProperty('--interior-texture',range(.15,.85,phase)*(1-range(4.15,4.85,phase)));
+ style.setProperty('--backdrop-light',lerp(backgroundLight[a],backgroundLight[a+1],t));style.setProperty('--haze-x',values[0]+'%');style.setProperty('--haze-y',values[1]+'%');style.setProperty('--chamber',values[2]);style.setProperty('--haze-angle',values[3]+'deg');style.setProperty('--haze-pan',((phase-2.5)*-2.8)+'%');
 }
 function updateLight(phase){
  const intro=1-range(.08,.85,phase), close=range(2.2,2.92,phase)*(1-range(3.05,3.8,phase));

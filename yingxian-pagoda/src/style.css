@@ -104,3 +104,9 @@ body{color:#f6e5c8}h1,h2,.brand{font-weight:700;font-synthesis:none}.hero h1{fon
 
 /* 逐幕对照原稿的背景亮度，首尾天空保持独立曝光。 */
 #backdrop{filter:brightness(var(--backdrop-light,1))}.is-exploring #backdrop{filter:none}
+
+/* 中间四幕：保留雾纹细节，静态细颗粒仅位于模型背后。 */
+.chamber-haze{opacity:calc(var(--interior-texture,0)*.28);filter:blur(2px) saturate(.28);transform:translateX(var(--haze-pan,0%)) rotate(var(--haze-angle,0deg)) scale(1.06)}
+.grain{display:block;pointer-events:none;background-size:180px 180px;opacity:calc(var(--interior-texture,0)*.055);mix-blend-mode:screen}
+.is-exploring .chamber-haze,.is-exploring .grain{display:none}
+@media(max-width:700px){.chamber-haze{filter:blur(1px) saturate(.28);opacity:calc(var(--interior-texture,0)*.24)}.grain{opacity:calc(var(--interior-texture,0)*.04)}}
