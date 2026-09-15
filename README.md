@@ -35,3 +35,5 @@ npm run dev
 ## 离线渲染备选
 
 新增独立 `/offline.html`：斗栱连续运镜样片，滚动控制视频进度；附 1080p 高清静帧。原实时六幕保留。可编辑场景、重渲染脚本和验证记录见 [offline-render](offline-render/README.md)。
+
+斗栱离线质感已单独精修：长轴木纹、独立端面、彩画磨损与柔和侧光。比较页面 `/material-study.html`，制作资料见 [精修说明](offline-render/refined/README.md)。实时镜头版保留。

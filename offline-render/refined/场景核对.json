@@ -1,0 +1,15 @@
+{
+  "original": {
+    "vertex_sha256": "d87fb411ae1c6951c10895173d6acb541508519443d9c4cd925eee7233d8f38e",
+    "vertices": 664394
+  },
+  "refined": {
+    "vertex_sha256": "d87fb411ae1c6951c10895173d6acb541508519443d9c4cd925eee7233d8f38e",
+    "vertices": 664394
+  },
+  "same_vertex_geometry": true,
+  "packed_images": 7,
+  "missing_external_images": [],
+  "camera_frames": 36,
+  "render_engine": "CYCLES"
+}

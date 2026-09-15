@@ -301,5 +301,13 @@
   "latest_web_alignment": "yingxian-pagoda/public/alignment.html",
   "latest_web_revision": "v11：台基环境与木地板建模、近景构图和逐幕背景校色",
   "general_model": "model/应县木塔_环境精修.glb",
-  "environment_source": "yingxian-pagoda/src/environment.js（铺地、树干与带透明树冠的植被）"
+  "environment_source": "yingxian-pagoda/src/environment.js（铺地、树干与带透明树冠的植被）",
+  "offline_refined": {
+    "scene": "offline-render/refined/斗栱质感精修.blend",
+    "script": "offline-render/refine.py",
+    "video": "yingxian-pagoda/public/offline/dougong-refined.mp4",
+    "detail": "yingxian-pagoda/public/offline/detail-refined.jpg",
+    "comparison": "yingxian-pagoda/public/material-study.html",
+    "scope": "斗栱局部样片，36帧，1.5秒；实时模型保留"
+  }
 }
