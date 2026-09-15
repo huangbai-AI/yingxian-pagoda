@@ -1,0 +1,84 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "phase": 0,
+      "overflow": false,
+      "title": [
+        {
+          "text": "天地之间\n一木千年",
+          "x": 22.5,
+          "right": 352.5,
+          "y": 126.59375,
+          "bottom": 168.203125
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "overflow": false,
+      "title": [
+        {
+          "text": "层层展开，\n看见暗层。",
+          "x": 63.75,
+          "right": 352.5,
+          "y": 537.671875,
+          "bottom": 622.609375
+        }
+      ]
+    },
+    {
+      "phase": 1.99998,
+      "overflow": false,
+      "title": [
+        {
+          "text": "八面相连，\n内外相依。",
+          "x": 33.75,
+          "right": 352.5,
+          "y": 555.1096801757812,
+          "bottom": 640.0471801757812
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "overflow": false,
+      "title": [
+        {
+          "text": "一木承一木。",
+          "x": 22.5,
+          "right": 352.5,
+          "y": 161.03125,
+          "bottom": 203.5
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "overflow": false,
+      "title": [
+        {
+          "text": "合木成塔。",
+          "x": 22.5,
+          "right": 229.359375,
+          "y": 614.1875,
+          "bottom": 663.734375
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "overflow": false,
+      "title": [
+        {
+          "text": "千年未完，\n仍需守护。",
+          "x": 176.25,
+          "right": 356.25,
+          "y": 279.1875,
+          "bottom": 349.21875
+        }
+      ]
+    }
+  ],
+  "returned": true
+}

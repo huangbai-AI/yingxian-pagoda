@@ -1,5 +1,5 @@
 {
-  "model_source": "现有 Blender 精修模型，复用；本轮未改变结构",
+  "model_source": "在第六版完整斗栱模型上补建：石栏、砌石面层、1551块木地板与配殿",
   "approved_designs": [
     "第三版设计/03_单层柱网.png",
     "第三版设计/01_整塔.png",
@@ -8,7 +8,7 @@
     "第三版设计/04_斗栱特写.png",
     "第三版设计/02_斜向拆层.png"
   ],
-  "editable_model": "model/应县木塔.blend",
+  "editable_model": "model/应县木塔_环境精修.blend",
   "web_model": "yingxian-pagoda/public/models/yingxian.glb",
   "lighting_previous": "model/应县木塔_六幕光影.blend",
   "lighting_samples": "质感与镜头对照/质感样片.blend",
@@ -221,30 +221,85 @@
       ],
       "vertical_fov": 64
     },
+    "structure": {
+      "position": [
+        29,
+        59,
+        49
+      ],
+      "target": [
+        0,
+        44,
+        0
+      ],
+      "vertical_fov": 34
+    },
+    "columns": {
+      "position": [
+        17,
+        54,
+        29
+      ],
+      "target": [
+        0,
+        41.5,
+        0
+      ],
+      "vertical_fov": 36
+    },
     "detail": {
       "position": [
-        3.6,
-        43.25,
-        13.9
+        -2.4,
+        42.8,
+        14.4
       ],
       "target": [
         0.2,
-        43.7,
-        11
+        43.4,
+        11.4
       ],
-      "vertical_fov": 42
+      "vertical_fov": 44
+    },
+    "eaves": {
+      "position": [
+        9,
+        33,
+        24
+      ],
+      "target": [
+        0.5,
+        36,
+        8
+      ],
+      "vertical_fov": 40
+    },
+    "guard": {
+      "position": [
+        43,
+        28,
+        126
+      ],
+      "target": [
+        0,
+        31.5,
+        0
+      ],
+      "vertical_fov": 34
     }
   },
   "verified": [
-    "七层分组与初始位置来自最终 GLB",
-    "电脑与手机六幕运行检查",
-    "两张实际预渲染样片"
+    "新版 Blender 文件已重新打开",
+    "新版 GLB 压缩后重新读取，保留七层与269网格",
+    "电脑与手机六幕截图及归位检查",
+    "新增环境首尾两幕二次检查"
   ],
   "remaining": [
     "完整预渲染滚动序列未生成",
-    "部分木构形体及装饰与生成设计稿不同",
-    "预渲染定帧保留上轮版本，本轮调整用于实时首屏"
+    "木构比例、装饰与自然间接光仍与生成设计稿有差异",
+    "配殿、院落与植被用于营造空间氛围，不是寺院测绘复原"
   ],
   "latest_web_alignment": "yingxian-pagoda/public/alignment.html",
-  "latest_web_revision": "v10：六幕光影与文字排版；模型几何不变"
+  "latest_web_revision": "v11：台基环境与木地板建模、近景构图和逐幕背景校色",
+  "general_model": "model/应县木塔_环境精修.glb",
+  "environment_source": "yingxian-pagoda/src/environment.js（铺地、树干与带透明树冠的植被）"
 }
