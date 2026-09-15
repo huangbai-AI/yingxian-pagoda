@@ -249,16 +249,16 @@
     },
     "detail": {
       "position": [
-        -2.4,
-        42.8,
-        14.4
+        3.6,
+        43.25,
+        13.9
       ],
       "target": [
         0.2,
-        43.4,
-        11.4
+        43.7,
+        11
       ],
-      "vertical_fov": 44
+      "vertical_fov": 42
     },
     "eaves": {
       "position": [

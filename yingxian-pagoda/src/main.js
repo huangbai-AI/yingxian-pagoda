@@ -66,7 +66,7 @@ const poses=[
  {pos:[18,18,60],aim:[0,29,0],fov:64,shift:0,roll:0,explode:0,isolate:0,roof:0,env:1},
  {pos:[29,59,49],aim:[0,44,0],shift:-.13,roll:-.43,explode:1,isolate:0,roof:0,env:0},
  {pos:[17,54,29],aim:[0,41.5,0],fov:36,shift:-.15,roll:-.06,explode:1,isolate:1,roof:1,env:0},
- {pos:[-2.4,42.8,14.4],aim:[.2,43.4,11.4],fov:44,shift:.14,roll:0,explode:1,isolate:1,roof:0,env:0},
+ {pos:[3.6,43.25,13.9],aim:[.2,43.7,11],fov:42,shift:.14,roll:0,explode:1,isolate:1,roof:0,env:0},
  {pos:[9,33,24],aim:[.5,36,8],fov:40,shift:.04,roll:.08,explode:0,isolate:0,roof:0,env:0},
  {pos:[43,28,126],aim:[0,31.5,0],shift:-.14,roll:0,explode:0,isolate:0,roof:0,env:1}
 ];
