@@ -1,0 +1,86 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "width": 1672,
+      "samples": [
+        {
+          "t": 0,
+          "spread": 0
+        },
+        {
+          "t": 300,
+          "spread": 0
+        },
+        {
+          "t": 800,
+          "spread": 0
+        },
+        {
+          "t": 1500,
+          "spread": 0
+        },
+        {
+          "t": 2300,
+          "spread": 0
+        },
+        {
+          "t": 2799,
+          "spread": 0
+        },
+        {
+          "t": 2801,
+          "spread": 0
+        },
+        {
+          "t": 3400,
+          "spread": 0
+        }
+      ],
+      "progressShift": 0
+    },
+    {
+      "width": 390,
+      "samples": [
+        {
+          "t": 0,
+          "spread": 0
+        },
+        {
+          "t": 300,
+          "spread": 0
+        },
+        {
+          "t": 800,
+          "spread": 0
+        },
+        {
+          "t": 1500,
+          "spread": 0
+        },
+        {
+          "t": 2300,
+          "spread": 0
+        },
+        {
+          "t": 2799,
+          "spread": 0
+        },
+        {
+          "t": 2801,
+          "spread": 0
+        },
+        {
+          "t": 3400,
+          "spread": 0
+        }
+      ],
+      "progressShift": 0
+    }
+  ],
+  "exit": {
+    "samples": 13,
+    "maxSpread": 0,
+    "locked": false
+  }
+}

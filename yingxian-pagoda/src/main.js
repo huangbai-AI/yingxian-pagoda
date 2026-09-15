@@ -72,9 +72,13 @@ async function startArrival(){
  const finish=()=>{arrival.light=1;$('#arrival-shade').style.opacity=0;$('#model-loading').hidden=true;document.body.classList.remove('loading');lenis?.start();gsap.set([...text,...details],{clearProps:'opacity,visibility,transform,filter'});};
  if(reduced){finish();return;}
  if(hero){arrival.light=.24;gsap.set('#arrival-shade',{opacity:1});gsap.set(text,{autoAlpha:0,y:26,filter:'blur(7px)'});gsap.set(details,{autoAlpha:0,y:12});}
+ // Freeze every tier on the same frame; keep SVG transforms in the browser's coordinate system.
+ const tiers=$$('.loading-tower g');
+ tiers.forEach(el=>el.getAnimations().forEach(animation=>animation.pause()));
+ const tierFrames=tiers.map(el=>{const style=getComputedStyle(el);return {transform:style.transform,opacity:style.opacity};});
+ tiers.forEach((el,i)=>{el.getAnimations().forEach(animation=>animation.cancel());el.style.animation='none';el.animate([tierFrames[i],{transform:'translateY(0px)',opacity:1}],{duration:280,easing:'ease-out',fill:'forwards'});});
  arrivalTimeline=gsap.timeline({onComplete:finish});
- arrivalTimeline.to('.loading-tower g',{animation:'none',opacity:1,y:0,scale:1,duration:.28})
- .to('#model-loading',{opacity:0,duration:.7,ease:'power2.inOut',onStart:()=>document.body.classList.remove('loading'),onComplete:()=>$('#model-loading').hidden=true},.28);
+ arrivalTimeline.to('#model-loading',{opacity:0,duration:.7,ease:'power2.inOut',onStart:()=>document.body.classList.remove('loading'),onComplete:()=>$('#model-loading').hidden=true},.28);
  if(hero){arrivalTimeline.to(arrival,{light:1,duration:2.4,ease:'power2.inOut'},.35)
  .to('#arrival-shade',{opacity:0,duration:2.4,ease:'power2.inOut'},.35)
  .to(text,{autoAlpha:1,y:0,filter:'blur(0px)',duration:1.35,stagger:.24,ease:'power3.out'},.85)
