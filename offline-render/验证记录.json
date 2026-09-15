@@ -1,0 +1,109 @@
+{
+  "check": {
+    "errors": [],
+    "checks": [
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0,
+        "currentTime": 0,
+        "duration": 1.5,
+        "seeking": false
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0.5,
+        "currentTime": 0.729166,
+        "duration": 1.5,
+        "seeking": false
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 1,
+        "currentTime": 1.458333,
+        "duration": 1.5,
+        "seeking": false
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0.25,
+        "currentTime": 0.364583,
+        "duration": 1.5,
+        "seeking": false
+      },
+      {
+        "ready": true,
+        "failed": false,
+        "target": 0,
+        "currentTime": 0,
+        "duration": 1.5,
+        "seeking": false
+      }
+    ],
+    "mobile": {
+      "overflow": false,
+      "stats": {
+        "ready": true,
+        "failed": false,
+        "target": 0.5999210110584519,
+        "currentTime": 0.874884,
+        "duration": 1.5,
+        "seeking": false
+      }
+    }
+  },
+  "interaction": {
+    "errors": [],
+    "forward": {
+      "ready": true,
+      "failed": false,
+      "target": 0.3333333333333333,
+      "currentTime": 0.486111,
+      "duration": 1.5,
+      "seeking": false
+    },
+    "reverse": {
+      "ready": true,
+      "failed": false,
+      "target": 0,
+      "currentTime": 0,
+      "duration": 1.5,
+      "seeking": false
+    },
+    "failure": true,
+    "recovered": {
+      "ready": true,
+      "failed": false,
+      "target": 0,
+      "currentTime": 0,
+      "duration": 1.5,
+      "seeking": false
+    }
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 960,
+        "height": 540,
+        "r_frame_rate": "24/1",
+        "nb_frames": "36"
+      }
+    ],
+    "format": {
+      "duration": "1.500000",
+      "size": "1427788"
+    }
+  },
+  "notes": [
+    "36 帧均为关键帧",
+    "加载失败测试故意阻断一次视频请求，重试后恢复",
+    "高清静帧与保存的场景均已重新打开检查",
+    "视频为小尺寸方案验证样片，不是六幕完整成片"
+  ]
+}
