@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 const loader=new THREE.TextureLoader();
-const texture=(name,color=false)=>{const t=loader.load('/materials/'+name);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(.82,.82);t.flipY=false;t.colorSpace=color?THREE.SRGBColorSpace:THREE.NoColorSpace;return t;};
+const texture=(name,color=false)=>{const t=loader.load('materials/'+name);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(.82,.82);t.flipY=false;t.colorSpace=color?THREE.SRGBColorSpace:THREE.NoColorSpace;return t;};
 const color=texture('timber-color.jpg',true),normal=texture('timber-normal.jpg'),roughness=texture('timber-roughness.jpg');
 const stoneCanvas=document.createElement('canvas');stoneCanvas.width=stoneCanvas.height=256;
 const ctx=stoneCanvas.getContext('2d'),pixels=ctx.createImageData(256,256);let seed=1056;

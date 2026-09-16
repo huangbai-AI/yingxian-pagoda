@@ -47,7 +47,7 @@ try{
  controls=new OrbitControls(camera,canvas);controls.enabled=false;controls.enableDamping=true;controls.dampingFactor=.075;controls.minDistance=3;controls.maxDistance=400;controls.maxPolarAngle=Math.PI*.8;canvas.tabIndex=0;
  controls.addEventListener('start',()=>{if(exploring){autorotate=false;$('#auto-toggle').setAttribute('aria-pressed','false');}});
  new ResizeObserver(()=>{viewportW=stage.clientWidth;viewportH=stage.clientHeight;renderer.setSize(viewportW,viewportH,false);cinema.resize(viewportW,viewportH);camera.aspect=viewportW/viewportH;camera.updateProjectionMatrix();}).observe(stage);
- new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath('/draco/').setWorkerLimit(2)).load('/models/yingxian-v20.glb?v=20',g=>{
+ new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath('draco/').setWorkerLimit(2)).load('models/yingxian-v20.glb?v=20',g=>{
   model=g.scene;model.name='应县木塔';scene.add(model);model.updateMatrixWorld(true);
   model.traverse(o=>{
    if(/^Level_\d+$/.test(o.name)){o.userData.index=Number(o.name.split('_')[1]);o.userData.baseY=o.position.y;levels.push(o);}
