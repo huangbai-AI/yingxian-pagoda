@@ -96,7 +96,7 @@ body{color:#f6e5c8}h1,h2,.brand{font-weight:700;font-synthesis:none}.hero h1{fon
 }
 @media(max-width:700px){
  .copy h2{letter-spacing:-.015em}.lead{letter-spacing:.06em}
- .structure-panel .copy,.columns-panel .copy{background:radial-gradient(ellipse at 85% 70%,#07191cb0,transparent 75%)}
+ .structure-panel .copy,.columns-panel .copy{background:none}
  .chamber-haze{filter:blur(12px) saturate(.35)}
 }
 

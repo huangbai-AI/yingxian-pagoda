@@ -47,14 +47,15 @@ try{
  controls=new OrbitControls(camera,canvas);controls.enabled=false;controls.enableDamping=true;controls.dampingFactor=.075;controls.minDistance=3;controls.maxDistance=400;controls.maxPolarAngle=Math.PI*.8;canvas.tabIndex=0;
  controls.addEventListener('start',()=>{if(exploring){autorotate=false;$('#auto-toggle').setAttribute('aria-pressed','false');}});
  new ResizeObserver(()=>{viewportW=stage.clientWidth;viewportH=stage.clientHeight;renderer.setSize(viewportW,viewportH,false);cinema.resize(viewportW,viewportH);camera.aspect=viewportW/viewportH;camera.updateProjectionMatrix();}).observe(stage);
- new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath('/draco/').setWorkerLimit(2)).load('/models/yingxian.glb?v=17',g=>{
+ new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath('/draco/').setWorkerLimit(2)).load('/models/yingxian-v20.glb?v=20',g=>{
   model=g.scene;model.name='应县木塔';scene.add(model);model.updateMatrixWorld(true);
   model.traverse(o=>{
    if(/^Level_\d+$/.test(o.name)){o.userData.index=Number(o.name.split('_')[1]);o.userData.baseY=o.position.y;levels.push(o);}
    if(!o.isMesh)return;meshes.push(o);o.castShadow=true;o.receiveShadow=true;o.material=o.material.clone();const m=o.material;m.alphaHash=true;m.roughness=.81;m.clippingPlanes=[];
-   if(m.map){m.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());m.bumpMap=m.map;m.bumpScale=.002;if(/朱漆/.test(m.name))m.color.setRGB(.72,.55,.40);else if(/暗木/.test(m.name))m.color.setRGB(.54,.52,.45);else if(/浅木/.test(m.name))m.color.setRGB(.96,.85,.67);else m.color.setRGB(.80,.73,.61);}
+   if(m.map&&!/牌匾墨书/.test(m.name)){m.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());m.bumpMap=m.map;m.bumpScale=.002;if(/朱漆/.test(m.name))m.color.setRGB(.72,.55,.40);else if(/暗木/.test(m.name))m.color.setRGB(.54,.52,.45);else if(/浅木/.test(m.name))m.color.setRGB(.96,.85,.67);else m.color.setRGB(.80,.73,.61);}
    if(/青灰瓦|瓦脊/.test(m.name))m.color.setRGB(.085,.092,.095);if(/石台/.test(m.name))m.color.setRGB(.12,.14,.13);
    refineSurface(o,renderer);
+   if(/牌匾墨书/.test(m.name)){m.color.setHex(0xffffff);m.polygonOffset=true;m.polygonOffsetFactor=-1;m.polygonOffsetUnits=-2;m.roughness=.94;m.metalness=0;m.bumpMap=null;m.normalMap=null;m.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());}
    o.userData.roof=/筒瓦|屋面|垂脊|檐口|椽子|脊饰|风铎|攒尖|塔刹|相轮|宝瓶|刹尖|刹链|瓦当|望板|屋架/.test(o.name);o.userData.stair=/木楼梯/.test(o.name);o.userData.enclosure=/隔扇|匾额/.test(o.name);o.userData.transition=/层间承|层间拉结/.test(o.name);if(o.userData.roof)roofMeshes.push(o);
   });
   loaded=true;$('#load-percent').textContent='100%';$('#load-bar').style.width='100%';startArrival();
@@ -87,6 +88,9 @@ async function startArrival(){
 let timeline;
 function buildStory(){timeline?.scrollTrigger?.kill();timeline?.kill();timeline=gsap.fromTo(state,{phase:0},{phase:5,ease:'none',scrollTrigger:{trigger:'#intro',start:'top top',endTrigger:'#guard',end:'top top',scrub:reduced?true:.65,invalidateOnRefresh:true}});}
 buildStory();window.addEventListener('resize',()=>{buildStory();ScrollTrigger.refresh();});document.fonts.ready.then(()=>ScrollTrigger.refresh());
+// Shared height fit used by the v18 Blender model. Explosion offsets remain separate.
+const heightKnots=[[0,0],[4.42,4.42],[10.5,10.5],[13.75,13.2],[16.3,14.1],[21.48,19.202],[30.78,28.150],[39.88,37.25],[48.98,46.35],[59,55.571],[67.31,67.31],[100,100]];
+function modelHeight(z){for(let i=1;i<heightKnots.length;i++){const [a,b]=heightKnots[i-1],[c,d]=heightKnots[i];if(z<=c)return b+(z-a)/(c-a)*(d-b);}return z;}
 // All six poses track the same third-floor corner. No replacement model is used for close views.
 const poses=[
  {pos:[18,18,60],aim:[0,29,0],fov:64,shift:0,roll:0,explode:0,isolate:0,roof:0,env:1},
@@ -96,7 +100,13 @@ const poses=[
  {pos:[9,33,24],aim:[.5,36,8],fov:40,shift:.04,roll:.08,explode:0,isolate:0,roof:0,env:0},
  {pos:[43,28,126],aim:[0,31.5,0],shift:-.14,roll:0,explode:0,isolate:0,roof:0,env:1}
 ];
-for(const pose of poses)pose.fov??=34;
+for(const [i,pose] of poses.entries()){
+ pose.fov??=34;
+ // Keep the original view direction while following the rebuilt third-floor assembly.
+ const offset=i>=1&&i<=3?8:0;
+ const delta=modelHeight(pose.aim[1]-offset)+offset-pose.aim[1];
+ if(i>0&&i<5){pose.pos[1]+=delta;pose.aim[1]+=delta;}
+}
 const sample={pos:new THREE.Vector3(),aim:new THREE.Vector3()};
 function sampleStory(raw){const a=Math.min(4,Math.floor(raw)),b=a+1,t=ease(clamp((raw-a-.08)/.84,0,1)),pa=poses[a],pb=poses[b];sample.pos.fromArray(pa.pos).lerp(cameraPosition.fromArray(pb.pos),t);sample.aim.fromArray(pa.aim).lerp(cameraAim.fromArray(pb.aim),t);for(const k of ['fov','shift','roll','explode','isolate','roof','env'])sample[k]=lerp(pa[k],pb[k],t);return sample;}
 const offsetFor=(i,amount)=>i===0?0:(Math.min(i,5)-2)*8*amount;
@@ -110,24 +120,24 @@ function updateAssembly(s,phase){
   if(m.userData.stair)opacity*=1-Math.max(state.explode,exploring?0:s.isolate);if(exploring&&hiddenRoof&&m.userData.roof)opacity=0;m.position.y=lift;m.material.opacity=1;m.material.userData.reveal.value=opacity;m.visible=opacity>.015;
  });
  const axes=exploring?state.explode*.45:range(.45,.92,phase)*(1-range(1.2,1.85,phase));axis.material.opacity=axes*.85;axis.visible=axes>.01;
- rings.children.forEach(r=>{const i=r.userData.floor;r.position.y=[0,0,21.2,30.5,39.6][i]+offsetFor(i,state.explode);r.material.opacity=axes*.36;r.visible=axes>.01;});
+ rings.children.forEach(r=>{const i=r.userData.floor;r.position.y=modelHeight([0,0,21.2,30.5,39.6][i])+offsetFor(i,state.explode);r.material.opacity=axes*.36;r.visible=axes>.01;});
 }
 function setCamera(s){
  camera.fov=s.fov;let shift=s.shift,shiftY=0;cameraPosition.copy(s.pos);cameraAim.copy(s.aim);
  if(mobile()){
   const factors=[1.25,1.55,2.55,1.45,1.30,1.65],xs=[0,-.12,.02,.11,.16,-.25],ys=[.07,-.11,-.10,.05,-.07,-.04];const a=Math.min(4,Math.floor(state.phase)),t=ease(clamp((state.phase-a-.08)/.84,0,1)),b=a+1;cameraPosition.sub(cameraAim).multiplyScalar(lerp(factors[a],factors[b],t)).add(cameraAim);shift=lerp(xs[a],xs[b],t);shiftY=lerp(ys[a],ys[b],t);
  }
- if(planTop&&state.phase>1.85&&state.phase<2.3){cameraPosition.lerp(new THREE.Vector3(0,93,.15),.9);cameraAim.set(0,38.5,0);}
+ if(planTop&&state.phase>1.85&&state.phase<2.3){cameraPosition.lerp(new THREE.Vector3(0,93,.15),.9);cameraAim.set(0,modelHeight(30.5)+8,0);}
  camera.position.copy(cameraPosition);camera.up.set(Math.sin(s.roll),Math.cos(s.roll),0);camera.lookAt(cameraAim);controls.target.copy(cameraAim);camera.setViewOffset(viewportW,viewportH,-shift*viewportW,-shiftY*viewportH,viewportW,viewportH);
 }
 function setLabels(phase){
  const hotspot=$('#column-hotspot'),show=!exploring&&phase>1.86&&phase<2.25;hotspot.hidden=!show;const levelOffset=offsetFor(3,state.explode);
- function project(x,y,z){projectionPoint.set(x,y+levelOffset,z).project(camera);return {x:(projectionPoint.x+1)*.5*viewportW,y:(1-projectionPoint.y)*.5*viewportH};}
+ function project(x,y,z){projectionPoint.set(x,modelHeight(y)+levelOffset,z).project(camera);return {x:(projectionPoint.x+1)*.5*viewportW,y:(1-projectionPoint.y)*.5*viewportH};}
  if(show){const p=project(.15,36.05,11.05);hotspot.style.left=p.x+'px';hotspot.style.top=p.y+'px';}
  const amount=exploring?0:range(2.68,2.96,phase)*(1-range(3.05,3.36,phase));
  const svg=$('#label-lines');svg.style.opacity=amount;svg.setAttribute('viewBox',`0 0 ${viewportW} ${viewportH}`);
  const paths=[];
- [['#label-dou',.20,36.36,11.5],['#label-gong',.64,35.99,11.65],['#label-ang',.72,35.59,12.19]].forEach(([id,x,y,z],i)=>{
+ [['#label-dou',0,36.47,11.40],['#label-gong',.55,35.94,11.095],['#label-ang',0,35.80,12.18]].forEach(([id,x,y,z],i)=>{
   const el=$(id),p=project(x,y,z),lx=viewportW*(mobile()?.08:.12),ly=viewportH*(mobile()?[.48,.59,.70][i]:[.53,.64,.75][i]);el.style.opacity=amount;el.style.left=lx+'px';el.style.top=ly+'px';
   paths.push(`<path d="M${p.x} ${p.y} L${lx+80} ${ly} H${lx+38}"/><circle cx="${p.x}" cy="${p.y}" r="2"/>`);
  });svg.innerHTML=paths.join('');
@@ -149,7 +159,7 @@ function updateAtmosphere(phase){
 function updateLight(phase){
  const intro=1-range(.08,.85,phase), close=range(2.2,2.92,phase)*(1-range(3.05,3.8,phase));
  const interior=range(.15,.85,phase)*(1-range(4.15,4.85,phase));
- const size=lerp(lerp(62,18,1-range(.08,.6,Math.abs(phase-2))),8,close), y=lerp(35,35.8+offsetFor(3,state.explode),close), z=lerp(0,11.5,close);
+ const size=lerp(lerp(62,18,1-range(.08,.6,Math.abs(phase-2))),8,close), y=lerp(modelHeight(35),modelHeight(35.8)+offsetFor(3,state.explode),close), z=lerp(0,11.5,close);
  // 与离线近景保持同侧主光，弱冷补光托住檐下的木构细节。
  key.target.position.set(0,y,z);
  key.position.set(lerp(lerp(52,8,close),58,intro),y+lerp(lerp(29,4,close),23,intro),z+lerp(lerp(12,7,close),2,intro));
@@ -175,8 +185,8 @@ function applyClipping(){meshes.forEach(m=>{m.material.clippingPlanes=cutaway?[c
 function setPressed(id,on){$(id).setAttribute('aria-pressed',String(on));}
 function resetTools(){hiddenRoof=false;cutaway=false;autorotate=false;selectedFloor='all';manualExplode=0;$('#explode').value=0;$('#explode-value').textContent='0%';$('#floor-select').value='all';['#roof-toggle','#cut-toggle','#auto-toggle'].forEach(id=>setPressed(id,false));applyClipping();}
 function poseView(view='overall',animate=true){
- if(!loaded)return;$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const floor=selectedFloor==='all'?null:Number(selectedFloor),fy=[2,12,25,34,43,52,62][floor??0]+offsetFor(floor??2,manualExplode);let aim=new THREE.Vector3(0,floor===null?32:fy,0),pos=new THREE.Vector3(65,60,145);
- if(view==='front')pos.set(0,aim.y+8,150);if(view==='top')pos.set(0,160,.2);if(view==='detail'){aim.set(.2,36,11);pos.set(9,38,27);}if(floor!==null&&view!=='top'&&view!=='detail')pos.set(24,fy+15,45);if(floor===null&&manualExplode>0&&view!=='detail'){aim.y+=manualExplode*10;pos.y+=manualExplode*10;pos.sub(aim).multiplyScalar(1+manualExplode*.24).add(aim);}
+ if(!loaded)return;$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const floor=selectedFloor==='all'?null:Number(selectedFloor),fy=modelHeight([2,12,25,34,43,52,62][floor??0])+offsetFor(floor??2,manualExplode);let aim=new THREE.Vector3(0,floor===null?32:fy,0),pos=new THREE.Vector3(65,60,145);
+ if(view==='front')pos.set(0,aim.y+8,150);if(view==='top')pos.set(0,160,.2);if(view==='detail'){aim.set(.2,modelHeight(36),11);pos.set(9,modelHeight(38),27);}if(floor!==null&&view!=='top'&&view!=='detail')pos.set(24,fy+15,45);if(floor===null&&manualExplode>0&&view!=='detail'){aim.y+=manualExplode*10;pos.y+=manualExplode*10;pos.sub(aim).multiplyScalar(1+manualExplode*.24).add(aim);}
  let shift=.11,shiftY=0;if(mobile()){pos.sub(aim).multiplyScalar(view==='detail'?1.4:1.75).add(aim);shift=0;shiftY=-.18;}camera.up.set(0,1,0);camera.setViewOffset(viewportW,viewportH,-shift*viewportW,-shiftY*viewportH,viewportW,viewportH);
  camera.fov=34;camera.updateProjectionMatrix();const duration=animate&&!reduced?.85:0;gsap.to(camera.position,{x:pos.x,y:pos.y,z:pos.z,duration,ease:'power2.inOut',overwrite:true});gsap.to(controls.target,{x:aim.x,y:aim.y,z:aim.z,duration,ease:'power2.inOut',overwrite:true});$('#view-caption').textContent=({overall:'完整形制 · 五层六檐',front:'立面观察 · 檐与柱',top:'八角平面 · 内外相依',detail:'塔上斗栱 · 层层承托'})[view];
 }

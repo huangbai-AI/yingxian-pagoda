@@ -1,5 +1,18 @@
 {
-  "model_source": "在完整斗栱与环境精修模型上补建首层墙框、墙脚砌石、门扇铁件、柱础及灰泥纹理",
+  "mobile_minitool": {
+    "accuracy_review": "yingxian-pagoda/结构比例复核.md",
+    "accuracy_status": "实拍复核确认首层重檐立面与通用斗栱有形制偏差；连接和渲染通过不代表建筑比例准确，尚待按测绘口径重建。",
+    "source": "model/应县木塔_首层精修.blend",
+    "parts": "yingxian-pagoda/minitool/original-parts.json",
+    "exporter": "yingxian-pagoda/scripts/export-mobile-parts.py",
+    "contact_shadows": "yingxian-pagoda/scripts/bake-mobile-ao.py",
+    "build": "npm run build:minitool",
+    "latest_fix": "修复移动端斗栱退出近景时过早切换远景造成的破面；闭合过渡斗栱、平顺屋面、瓦当端面；移动顶部居中与底部导航已保留。",
+    "geometry_check": "yingxian-pagoda/scripts/check-mobile-brackets.mjs",
+    "scope": "原模型分件复用、远近细节分档、木材纹理与预计算接触阴影；保留七个层级及初始坐标。瓦片采用凹凸材质，远景减少被遮挡的内面及亚像素小件，非测绘级模型。",
+    "validation": "桌面浏览器手机画幅；小红书真机未实测"
+  },
+  "model_source": "在首层精修模型上按实拍修订首层双檐比例、首层柱网收分、塔刹占比与柱头/柱间/转角/平座承托组合。保留原版回退；属于科普重建，非测绘复原。",
   "approved_designs": [
     "第三版设计/03_单层柱网.png",
     "第三版设计/01_整塔.png",
@@ -8,8 +21,8 @@
     "第三版设计/04_斗栱特写.png",
     "第三版设计/02_斜向拆层.png"
   ],
-  "editable_model": "model/应县木塔_首层精修.blend",
-  "web_model": "yingxian-pagoda/public/models/yingxian.glb",
+  "editable_model": "model/应县木塔_牌匾稳定版.blend",
+  "web_model": "yingxian-pagoda/public/models/yingxian-v20.glb",
   "lighting_previous": "model/应县木塔_六幕光影.blend",
   "lighting_samples": "质感与镜头对照/质感样片.blend",
   "render_samples": [
@@ -329,5 +342,39 @@
     "meshes": 285,
     "nodes": 292,
     "upper_geometry_unchanged": true
+  },
+  "previous_editable_model": "model/应县木塔_首层精修.blend",
+  "previous_web_model": "yingxian-pagoda/public/models/yingxian.glb",
+  "web_structure_revision": {
+    "version": 18,
+    "script": "model/修订结构比例.py",
+    "geometry_report": "结构修正/结构比例_v18.json",
+    "accuracy_review": "yingxian-pagoda/结构比例复核.md",
+    "scope": "只更新原网页；小红书小工具仍使用先前模型",
+    "sources": [
+      "用户提供图1至图4实拍",
+      "王南等《天地圆方 塔像合一》，2021"
+    ],
+    "validation": "159组新增网格闭合检查通过，Blender重开与压缩模型读取通过；六幕浏览无脚本错误，完整状态及自由观塔重置后七个层级偏移归零；正视、斜视与近景目视检查。"
+  },
+  "plaques": {
+    "version": 19,
+    "source": "用户图1.jpeg实拍参照；图像生成重制书法与旧木底色，非原照片拓片",
+    "atlas": "yingxian-pagoda/public/materials/plaques/yingxian-plaques-v19.png",
+    "model_script": "model/添加牌匾贴图.py",
+    "report": "结构修正/牌匾贴图_v19.json",
+    "levels": {
+      "2": "天宮高聳",
+      "3": "釋迦塔（竖匾）",
+      "4": "天下奇觀"
+    },
+    "scope": "原网页与其下载模型；小红书小工具未更新",
+    "validation": "网页首页、飞檐近景、拆层和斗栱特写已目视检查：字向正确，牌匾跟随楼层，特写按既有规则隐去；无页面脚本错误，下载链接指向v19模型。",
+    "stability_fix": {
+      "version": 20,
+      "script": "model/修复牌匾重面.py",
+      "report": "结构修正/牌匾重面修复_v20.json",
+      "change": "移除三块木胎与贴图相邻的重复正面；网页牌匾增加轻微深度偏移，保持正常遮挡与受光。"
+    }
   }
 }

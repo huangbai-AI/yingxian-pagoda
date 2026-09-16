@@ -1,0 +1,934 @@
+{
+  "version": 18,
+  "geometry_objects": 399,
+  "removed_objects": [
+    "L1_斗栱坐斗_古木",
+    "L1_斗栱栱身_浅木",
+    "L1_斗栱升斗_古木",
+    "L1_昂嘴_古木",
+    "L1_斗栱顶枋_古木",
+    "L2_斗栱坐斗_古木",
+    "L2_斗栱栱身_浅木",
+    "L2_斗栱升斗_古木",
+    "L2_昂嘴_古木",
+    "L2_斗栱顶枋_古木",
+    "L2_栏杆花格_古木",
+    "L2_平座坐斗_古木_修正",
+    "L2_平座华栱_浅木_修正",
+    "L2_平座横栱_浅木_修正",
+    "L2_平座升斗_古木_修正",
+    "L3_栏杆花格_古木",
+    "L3_平座坐斗_古木_修正",
+    "L3_平座华栱_浅木_修正",
+    "L3_平座横栱_浅木_修正",
+    "L3_平座升斗_古木_修正",
+    "L3_斗栱坐斗_古木_完整校正",
+    "L3_斗栱栱身_浅木_完整校正",
+    "L3_斗栱升斗_古木_完整校正",
+    "L3_昂嘴_古木_完整校正",
+    "L3_斗栱顶枋_古木_完整校正",
+    "L4_斗栱坐斗_古木",
+    "L4_斗栱栱身_浅木",
+    "L4_斗栱升斗_古木",
+    "L4_昂嘴_古木",
+    "L4_斗栱顶枋_古木",
+    "L4_栏杆花格_古木",
+    "L4_平座坐斗_古木_修正",
+    "L4_平座华栱_浅木_修正",
+    "L4_平座横栱_浅木_修正",
+    "L4_平座升斗_古木_修正",
+    "L5_斗栱坐斗_古木",
+    "L5_斗栱栱身_浅木",
+    "L5_斗栱升斗_古木",
+    "L5_昂嘴_古木",
+    "L5_斗栱顶枋_古木",
+    "L5_栏杆花格_古木",
+    "L5_平座坐斗_古木_修正",
+    "L5_平座华栱_浅木_修正",
+    "L5_平座横栱_浅木_修正",
+    "L5_平座升斗_古木_修正"
+  ],
+  "height_mapping": [
+    [
+      0,
+      0
+    ],
+    [
+      4.42,
+      4.42
+    ],
+    [
+      10.5,
+      10.5
+    ],
+    [
+      13.75,
+      13.2
+    ],
+    [
+      16.3,
+      14.1
+    ],
+    [
+      21.48,
+      19.202
+    ],
+    [
+      30.78,
+      28.15
+    ],
+    [
+      39.88,
+      37.25
+    ],
+    [
+      48.98,
+      46.35
+    ],
+    [
+      59.0,
+      55.571
+    ],
+    [
+      67.31,
+      67.31
+    ],
+    [
+      100,
+      100
+    ]
+  ],
+  "new_components": {
+    "斗栱转角坐斗": 48,
+    "斗栱转角横栱": 144,
+    "斗栱转角华栱": 144,
+    "斗栱转角交承斗": 144,
+    "斗栱转角散斗": 288,
+    "斗栱转角斜栱": 192,
+    "斗栱转角斜承斗": 192,
+    "斗栱转角昂嘴": 48,
+    "斗栱转角顶枋": 48,
+    "斗栱转角斗耳": 96,
+    "斗栱柱头坐斗": 96,
+    "斗栱柱头横栱": 288,
+    "斗栱柱头华栱": 288,
+    "斗栱柱头交承斗": 288,
+    "斗栱柱头散斗": 576,
+    "斗栱柱头昂嘴": 96,
+    "斗栱柱头顶枋": 96,
+    "斗栱柱头斗耳": 192,
+    "斗栱柱间驼峰": 144,
+    "斗栱柱间坐斗": 144,
+    "斗栱柱间横栱": 432,
+    "斗栱柱间华栱": 432,
+    "斗栱柱间交承斗": 432,
+    "斗栱柱间散斗": 864,
+    "斗栱柱间斜昂": 288,
+    "斗栱柱间顶枋": 144,
+    "斗栱柱间斗耳": 288,
+    "平座承斗": 96,
+    "平座承托华栱": 288,
+    "平座承托横栱": 288,
+    "平座承托散斗": 576,
+    "平座承托短枋": 96,
+    "栏杆腰板": 32
+  },
+  "new_mesh_checks": [
+    {
+      "name": "L1_斗栱转角坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 160
+    },
+    {
+      "name": "L1_斗栱转角横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L1_斗栱转角华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L1_斗栱转角交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L1_斗栱转角散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L1_斗栱转角斜栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1024
+    },
+    {
+      "name": "L1_斗栱转角斜承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 640
+    },
+    {
+      "name": "L1_斗栱转角昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L1_斗栱转角顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L1_斗栱转角斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L1_斗栱柱头坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 320
+    },
+    {
+      "name": "L1_斗栱柱头横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1536
+    },
+    {
+      "name": "L1_斗栱柱头华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1536
+    },
+    {
+      "name": "L1_斗栱柱头交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L1_斗栱柱头散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1920
+    },
+    {
+      "name": "L1_斗栱柱头昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L1_斗栱柱头顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L1_斗栱柱头斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L1_斗栱柱间驼峰_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L1_斗栱柱间坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L1_斗栱柱间横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 2304
+    },
+    {
+      "name": "L1_斗栱柱间华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 2304
+    },
+    {
+      "name": "L1_斗栱柱间交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L1_斗栱柱间散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 2880
+    },
+    {
+      "name": "L1_斗栱柱间斜昂_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 576
+    },
+    {
+      "name": "L1_斗栱柱间顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L1_斗栱柱间斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 576
+    },
+    {
+      "name": "L2_斗栱转角坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 80
+    },
+    {
+      "name": "L2_斗栱转角横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L2_斗栱转角华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L2_斗栱转角交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L2_斗栱转角散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L2_斗栱转角斜栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 512
+    },
+    {
+      "name": "L2_斗栱转角斜承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 320
+    },
+    {
+      "name": "L2_斗栱转角昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L2_斗栱转角顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L2_斗栱转角斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L2_斗栱柱头坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 160
+    },
+    {
+      "name": "L2_斗栱柱头横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L2_斗栱柱头华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L2_斗栱柱头交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L2_斗栱柱头散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L2_斗栱柱头昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L2_斗栱柱头顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L2_斗栱柱头斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L2_斗栱柱间驼峰_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L2_斗栱柱间坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L2_斗栱柱间横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L2_斗栱柱间华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L2_斗栱柱间交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 720
+    },
+    {
+      "name": "L2_斗栱柱间散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L2_斗栱柱间斜昂_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L2_斗栱柱间顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L2_斗栱柱间斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L3_斗栱转角坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 80
+    },
+    {
+      "name": "L3_斗栱转角横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L3_斗栱转角华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L3_斗栱转角交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L3_斗栱转角散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L3_斗栱转角斜栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 512
+    },
+    {
+      "name": "L3_斗栱转角斜承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 320
+    },
+    {
+      "name": "L3_斗栱转角昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L3_斗栱转角顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L3_斗栱转角斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L3_斗栱柱头坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 160
+    },
+    {
+      "name": "L3_斗栱柱头横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L3_斗栱柱头华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L3_斗栱柱头交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L3_斗栱柱头散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L3_斗栱柱头昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L3_斗栱柱头顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L3_斗栱柱头斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L3_斗栱柱间驼峰_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L3_斗栱柱间坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L3_斗栱柱间横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L3_斗栱柱间华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L3_斗栱柱间交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 720
+    },
+    {
+      "name": "L3_斗栱柱间散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L3_斗栱柱间斜昂_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L3_斗栱柱间顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L3_斗栱柱间斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L4_斗栱转角坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 80
+    },
+    {
+      "name": "L4_斗栱转角横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L4_斗栱转角华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L4_斗栱转角交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L4_斗栱转角散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L4_斗栱转角斜栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 512
+    },
+    {
+      "name": "L4_斗栱转角斜承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 320
+    },
+    {
+      "name": "L4_斗栱转角昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L4_斗栱转角顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L4_斗栱转角斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L4_斗栱柱头坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 160
+    },
+    {
+      "name": "L4_斗栱柱头横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L4_斗栱柱头华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L4_斗栱柱头交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L4_斗栱柱头散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L4_斗栱柱头昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L4_斗栱柱头顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L4_斗栱柱头斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L4_斗栱柱间驼峰_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L4_斗栱柱间坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L4_斗栱柱间横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L4_斗栱柱间华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L4_斗栱柱间交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 720
+    },
+    {
+      "name": "L4_斗栱柱间散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L4_斗栱柱间斜昂_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L4_斗栱柱间顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L4_斗栱柱间斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L5_斗栱转角坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 80
+    },
+    {
+      "name": "L5_斗栱转角横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L5_斗栱转角华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 384
+    },
+    {
+      "name": "L5_斗栱转角交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L5_斗栱转角散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L5_斗栱转角斜栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 512
+    },
+    {
+      "name": "L5_斗栱转角斜承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 320
+    },
+    {
+      "name": "L5_斗栱转角昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L5_斗栱转角顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L5_斗栱转角斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L5_斗栱柱头坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 160
+    },
+    {
+      "name": "L5_斗栱柱头横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L5_斗栱柱头华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 768
+    },
+    {
+      "name": "L5_斗栱柱头交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 480
+    },
+    {
+      "name": "L5_斗栱柱头散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 960
+    },
+    {
+      "name": "L5_斗栱柱头昂嘴_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L5_斗栱柱头顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 96
+    },
+    {
+      "name": "L5_斗栱柱头斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 192
+    },
+    {
+      "name": "L5_斗栱柱间驼峰_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L5_斗栱柱间坐斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L5_斗栱柱间横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L5_斗栱柱间华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L5_斗栱柱间交承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 720
+    },
+    {
+      "name": "L5_斗栱柱间散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L5_斗栱柱间斜昂_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L5_斗栱柱间顶枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L5_斗栱柱间斗耳_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 288
+    },
+    {
+      "name": "L2_平座承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L2_平座承托华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L2_平座承托横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L2_平座承托散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L2_平座承托短枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L2_栏杆腰板_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L3_平座承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L3_平座承托华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L3_平座承托横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L3_平座承托散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L3_平座承托短枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L3_栏杆腰板_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L4_平座承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L4_平座承托华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L4_平座承托横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L4_平座承托散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L4_平座承托短枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L4_栏杆腰板_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    },
+    {
+      "name": "L5_平座承斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 240
+    },
+    {
+      "name": "L5_平座承托华栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L5_平座承托横栱_浅木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1152
+    },
+    {
+      "name": "L5_平座承托散斗_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 1440
+    },
+    {
+      "name": "L5_平座承托短枋_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 144
+    },
+    {
+      "name": "L5_栏杆腰板_古木_v18",
+      "non_manifold_edges": 0,
+      "faces": 48
+    }
+  ],
+  "limits": "分段比例参照与构件类别示意修订，未取得完整测绘构件尺寸；非54种斗栱考据复原。"
+}
